@@ -1,6 +1,6 @@
 function myFunction() {
+
     var x = document.getElementById("myText").value;
-    document.getElementById("my").innerHTML = x;
 
     var shpion = Math.random().toString(36);
     var territory1 = Math.random().toString(36);
@@ -49,16 +49,16 @@ function myFunction() {
     mass.sort(compareRandom);
 
     for (var i = 0; i < players; i++){
-        document.write(
-            "<button id=\'but"+i+"\' onclick=\"fun('but"+ i + "','"+ shpion +"','"+territory1+"','"+territory2+"','"+territory3+"','"+territory4+"', '"+mass[i]+"','"+territory5+"','"+territory6+"','"+territory7+"','"+territory8+"','"+territory9+"','"+territory10+"')\">Игрок "+ (i+1) +"</button>   "
-        );//'" + mass[i] + "'
+        var div = document.createElement('div');
+        div.innerHTML = "<button id=\'but"+i+"\' class=\'butRez\' onclick=\"fun('but"+ i + "','"+ shpion +"','"+territory1+"','"+territory2+"','"+territory3+"','"+territory4+"', '"+mass[i]+"','"+territory5+"','"+territory6+"','"+territory7+"','"+territory8+"','"+territory9+"','"+territory10+"')\">Игрок "+ (i+1) +"</button> ";
+        rez.appendChild(div);
     }
+    document.getElementById("but").disabled = true;
+    document.getElementById("dano").style.display = "none";
+
 }
 
-
-
 function fun(but,shpion,territory1,territory2,territory3,territory4,rez,territory5,territory6,territory7,territory8,territory9,territory10) {
-    document.getElementById(but).style.background = 'red';
     switch (rez) {
         case territory1:
             alert("Партизанский отряд");
@@ -94,6 +94,8 @@ function fun(but,shpion,territory1,territory2,territory3,territory4,rez,territor
             alert("Шпион");
             break;
     }
+    document.getElementById(but).style.background = 'red';
+    document.getElementById(but).style.color = 'black';
     document.getElementById(but).disabled = true;
 }
 
