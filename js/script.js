@@ -50,11 +50,12 @@ function myFunction() {
 
     for (var i = 0; i < players; i++){
         var div = document.createElement('div');
-        div.innerHTML = "<button id=\'but"+i+"\' class=\'butRez\' onclick=\"fun('but"+ i + "','"+ shpion +"','"+territory1+"','"+territory2+"','"+territory3+"','"+territory4+"', '"+mass[i]+"','"+territory5+"','"+territory6+"','"+territory7+"','"+territory8+"','"+territory9+"','"+territory10+"')\">Игрок "+ (i+1) +"</button> ";
+        div.innerHTML = "<button id=\'but"+i+"\' class=\'butRez\' onclick='startModal()'>Игрок "+ (i+1) +"</button> ";
         rez.appendChild(div);
-    }
+    } //onclick=\"fun('but"+ i + "','"+ shpion +"','"+territory1+"','"+territory2+"','"+territory3+"','"+territory4+"', '"+mass[i]+"','"+territory5+"','"+territory6+"','"+territory7+"','"+territory8+"','"+territory9+"','"+territory10+"')\"
     document.getElementById("but").disabled = true;
     document.getElementById("dano").style.display = "none";
+    document.getElementById("rez").style.display = "block";
 
 }
 

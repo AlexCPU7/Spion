@@ -65,7 +65,7 @@ table {
 
 html, body {
     width:100%;
-    height:100%;
+    /*height:100%;*/
     font-family:"Roboto";
     font-weight:300;
 }
@@ -121,7 +121,7 @@ h6 {
 .content {
     background-color:#fff;
     padding:10px;
-    margin-top:50px;
+    margin-top: 15%;
     text-align: center;
 }
 
@@ -211,21 +211,21 @@ h6 {
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 @media (max-width:767px) {
     .content {
         background-color: #fff;
         padding: 10px;
-        margin-top: 50px;
         text-align: center;
+        margin-top: 65%;
     }
 
     .container {
         margin-top: 16px;
         margin-right: auto;
         margin-left: auto;
-        top: 25%;
     }
 
     #dano {
@@ -261,7 +261,6 @@ h6 {
 @media (min-width:768px) {
     .container{
         width: 750px;
-        top: 25%;
     }
 }
 
@@ -505,13 +504,38 @@ h6 {
 .col-lg-offset-0{margin-left: 0;}
 }
 
-.butRez {
-    border: 0;
-    width: 110px;
-    height: 30px;
-    padding-left: 0px;
-    padding-right: 0px;
-    background: lawngreen;
+.myText {
+    font-size: 30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-align: center;
+}
+
+.dano {
+    height: 81px;
+    padding-top: 40px;
+}
+
+::-webkit-input-placeholder {
+    text-align:left;
+}
+:-moz-placeholder { /* Firefox 18- */
+    text-align:left;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align:left;
+}
+:-ms-input-placeholder {
+    text-align:left;
+}
+
+.rez {
+    margin-bottom: 25px;
+    padding-bottom: 0px;
+    margin-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: none;
 }
 
 .rez div{
@@ -522,13 +546,16 @@ h6 {
     padding-bottom: 10px;
 }
 
-.myText {
-    font-size: 30px;
+.butRez {
+    border: 0;
+    width: 212px;
+    height: 50px;
+    background: lawngreen;
+    font-size: 26px;
     margin-left: 4px;
     margin-right: 4px;
 }
 
-.dano {
-    height: 81px;
-    padding-top: 40px;
+.container {
+    height: 100%;
 }

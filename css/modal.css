@@ -1,0 +1,225 @@
+#myButt {
+    color: #fff;
+    font-size: 45px;
+    background-color: rgb(130,211,240);
+    height: 50px;
+    border: none;
+    display: block;
+    position: absolute;  
+    margin-top: 5px;
+    margin-left: 930px;
+}
+
+span {
+    color: #fff;
+    font-family: Calibri;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.circle {
+    width: 100%;
+    height: 100px;
+}
+.circleLeft {
+    height: 100px;
+    width: 100px;
+    -webkit-border-radius: 0 0 100% 0;
+    -moz-border-radius: 0 0 100% 0;
+    border-radius: 0 0 100% 0;
+    background-color: rgb(130,211,240);
+    float: left;
+}
+.circleRight {
+    height: 100px;
+    width: 100px;
+    -webkit-border-radius: 0 0 0 100%;
+    -moz-border-radius: 0 0 0 100%;
+    border-radius: 0 0 0 100%;
+    background-color: rgb(130,211,240);
+    float: right;
+}
+
+.title {
+    font-size: 36px;
+    text-transform: uppercase;    
+    padding-bottom: 25px;
+    font-weight:bold;
+    padding-left: 20px;
+}
+
+.subtitle {
+    font-size: 28px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+}
+
+.allInput {
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.inputTextTop {
+    height: 60px;
+    width: 50%;
+    float: left;
+    color: red;
+    
+}
+
+#inputTextTop {
+    background-color: rgb(24,176,226);
+    border-radius: 10px;
+    width: 281px;
+    height: 50px;
+    padding-left: 15px;
+}
+
+#inputTextTop::-webkit-input-placeholder { color:#fff; }
+
+.inputButton {
+    height: 60px;
+    width: 50%;
+    float: right;
+}
+
+#inputButton {
+    background-color: rgb(249,155,5);
+    border-radius: 10px;
+    width: 300px;
+    height: 58px;
+    float: right;
+    color: #fff;
+    font-size: 24px;
+}
+
+.inputTextBot {
+    font-size: 20px;
+}
+
+.footer {
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+@media (min-width: 1024px){
+    .modalContent {
+        background-color: rgb(24,176,226);
+        margin: 15% auto;  
+        width: 970px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .modalContent {
+        background-color: rgb(24,176,226);
+        margin: 15% auto; 
+        width: 90%;
+    }
+    
+    #myButt {
+        color: #fff;
+        font-size: 45px;
+        background-color: rgb(130,211,240);
+        height: 50px;
+        border: none;
+        display: block;
+        position: absolute;  
+        margin-top: 5px;
+        margin-left: 85%;
+    }
+    
+    .footer {
+        padding-bottom: 10px;
+        font-size: 12px;
+        padding-left: 20px;
+        background-color: rgb(24,176,226);
+    }
+}
+
+@media (max-width: 768px){
+    .modalContent {
+        background-color: rgb(24,176,226);
+        width: 100%;
+        height:  auto;
+    }
+    
+    #myButt {
+        color: #fff;
+        font-size: 45px;
+        background-color: rgb(130,211,240);
+        height: 50px;
+        border: none;
+        display: block;
+        position: absolute;  
+        margin-top: 5px;
+        margin-left: 92%;
+    }
+    
+    .allInput {
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .inputTextTop {
+        height: 60px;
+        width: 100%;
+        float: left;
+    }
+    
+    #inputTextTop {
+        background-color: rgb(24,176,226);
+        border-radius: 10px;
+        width: calc(100% - 19px);
+        height: 50px;
+        
+    }
+    
+    .inputButton {
+        height: 60px;
+        width: 100%;
+        float: left;
+    }
+    
+    #inputButton {
+        background-color: rgb(249,155,5);
+        border-radius: 10px;
+        width: 100%;
+        height: 58px;
+        float: left;
+        color: #fff;
+        font-size: 24px;
+    }
+    
+    .inputTextBot {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .subtitle {
+        font-size: 28px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .footer {
+        padding-bottom: 10px;
+        font-size: 12px;
+        padding: 20px;
+        background-color: rgb(24,176,226);
+    }
+}
