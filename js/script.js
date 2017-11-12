@@ -50,7 +50,7 @@ function myFunction() {
 
     for (var i = 0; i < players; i++){
         var div = document.createElement('div');
-        div.innerHTML = "<button id=\'but"+i+"\' class=\'butRez\' onclick='startModal()'>Игрок "+ (i+1) +"</button> ";
+        div.innerHTML = "<button id=\'but"+i+"\' class=\'butRez\' onclick=\"fun('but"+ i + "','"+ shpion +"','"+territory1+"','"+territory2+"','"+territory3+"','"+territory4+"', '"+mass[i]+"','"+territory5+"','"+territory6+"','"+territory7+"','"+territory8+"','"+territory9+"','"+territory10+"')\" >Игрок "+ (i+1) +"</button> ";
         rez.appendChild(div);
     } //onclick=\"fun('but"+ i + "','"+ shpion +"','"+territory1+"','"+territory2+"','"+territory3+"','"+territory4+"', '"+mass[i]+"','"+territory5+"','"+territory6+"','"+territory7+"','"+territory8+"','"+territory9+"','"+territory10+"')\"
     document.getElementById("but").disabled = true;
@@ -60,39 +60,62 @@ function myFunction() {
 }
 
 function fun(but,shpion,territory1,territory2,territory3,territory4,rez,territory5,territory6,territory7,territory8,territory9,territory10) {
+    var territory;
     switch (rez) {
         case territory1:
-            alert("Партизанский отряд");
+            territory = "Партизанский отряд";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory2:
-            alert("Киностудия");
+            territory = "Киностудия";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory3:
-            alert("Полярная станция");
+            territory = "Полярная станция";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory4:
-            alert("Банк");
+            territory = "Банк";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory5:
-            alert("Театр");
+            territory = "Театр";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory6:
-            alert("Больница");
+            territory = "Больница";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory7:
-            alert("Пиратский корабль");
+            territory = "Пиратский корабль";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory8:
-            alert("Университет");
+            territory = "Университет";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory9:
-            alert("Церковь");
+            territory = "Церковь";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case territory10:
-            alert("Казино");
+            territory = "Казино";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
         case shpion:
-            alert("Шпион");
+            territory = "Шпион";
+            printTerritory(territory);
+            modal.style.display = "block";
             break;
     }
     document.getElementById(but).style.background = 'red';
@@ -100,6 +123,10 @@ function fun(but,shpion,territory1,territory2,territory3,territory4,rez,territor
     document.getElementById(but).disabled = true;
 }
 
-
-
+function printTerritory(territory) {
+    document.getElementById('title').innerHTML = '';
+    var span = document.createElement('span');
+    span.innerHTML = territory;
+    title.appendChild(span);
+}
 
